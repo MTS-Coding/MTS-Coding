@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTS Coding: Sobre Nosotros</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/mts-fav.png" type="image/png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mariana Álvarez Flores, Tomás de Azkue, Jorge Fracalossi Martínez">
+</head>
+<body class="body-about-us">
+    <header class="navbar-container-us">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/mts-logo-header2.png" alt="Logo" />
+                <!-- <span>(MTS).Coding</span> -->
+            </div>
+
+            <ul class="nav-links">
+                <li class="li-1"><a href="../index.html">Inicio</a></li>
+                <li class="li-2"><a href="#">Servicios</a></li>
+                <li class="li-3"><a href="#">Nuestros Proyectos</a></li>
+                <li class="li-4"><a href="#">FAQ</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="li-5"><a href="./form.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- <section class="content">
+            <h1>Convertimos tus ideas en sitios web profesionales</h1>
+            <p>
+                No se te vaya a ocurrir cerrar esta página. Tenés mucho para ver y para consultar. No dudes más, contactate con nosotros, no te vas a arrepentir.
+            </p>
+        </section> -->
+        <div class="presentation-card-container">
+    <div class="presentation-card-inner">
+        <!-- LADO A -->
+        <div class="presentation-card card-front">
+            <div class="card-content">
+                <div class="your-image">
+                    <img src="../img/Shorsh.jpg" alt="Jorge Fracalossi Martínez">
+                    <h1 class="personal-title">SHORSH</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- LADO B -->
+        <div class="presentation-card card-back">
+            
+            <h2>Un poco sobre mi</h2>
+            <div class="info-list">
+                <p><strong>Nombre:</strong> Jorge Fracalossi Martínez.</p>
+                <p><strong>Edad:</strong> 36.</p>
+                <p><strong>Hobbies:</strong> Me gusta jugar al básquet, ir al gym, el gaming y pasar tiempo con familia y amigos.</p>
+                <p><strong>Algo personal:</strong> Soy una persona tranquila, sueño despierto todo el tiempo, me río de todo y siempre intento poner al resto por encima de mi. Soy introvertido hasta que entro en confianza, ya luego de eso soy insoportable.</p>
+
+                <a href="../us/shorsh.html" target="_blank">
+                    <button class="info-button">¡VER MÁS!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <div>
+        <footer>
+            <p class="p2">¡Unite a nuestras redes sociales!</p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/mts.coding/profilecard/?igsh=MjJxNTRjdzZiZWty" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/ig-logo.png" alt="Instagram"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/x-logo.png" alt="X"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/fb-logo.png" alt="Facebook"></a>
+            </div>
+            <p class="p2">&copy; MTS Coding | Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('.presentation-card-inner').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+            });
+        });
+    </script>
+</body>
+</html>

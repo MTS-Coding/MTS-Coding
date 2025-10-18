@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "coolvetica";
+    src: url(../fonts/coolvetica/Coolvetica\ Hv\ Comp.otf);
+}
+
+@font-face {
+    font-family: "creatodisplay";
+    src: url(../fonts/creato-display/CreatoDisplay-Regular.otf);
+}
+
+@font-face {
+    font-family: "matchavibes";
+    src: url(../fonts/matcha-vibes/Matcha\ Vibes.otf);
+}
+
+@font-face {
+    font-family: "vanillapancake";
+    src: url(../fonts/vanilla-pancake/Vanilla\ Pancake.otf);
+}
+
+
+$font1: 'coolvetica', serif;
+$font2: 'creatodisplay', serif;
+$font3: 'matchavibes', serif;
+$font4: 'vanillapancake', serif;

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    background-size: cover;
+    color: #fff;
+}
+
+.main-container {
+    width: 75%;
+    max-width: auto;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.content h1 {
+    color: #00aaff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #ffffff;
+}
