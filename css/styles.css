@@ -179,6 +179,22 @@ body {
   color: #ffffff;
 }
 
+.video-container {
+  text-align: center;
+}
+
+video {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
 .body-about-us {
   background-image: url(../img/background-code.png);
   background-size: cover;
@@ -375,9 +391,8 @@ body {
   width: 100%;
   max-width: 800px;
   font-family: Impact, serif;
-  background-color: none;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 15px;
   backdrop-filter: blur(5px);
   margin: 50px auto;
 }
@@ -385,100 +400,156 @@ body {
 form {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 25px;
+  padding: 30px;
   border-radius: 50px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   width: 400px;
+  position: relative;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 2.2em;
   -webkit-text-stroke: 0.2px black;
+  color: #fff;
 }
 
 .form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  font-size: 1.2em;
-  color: #fff;
-  -webkit-text-stroke: 0.2px black;
-  display: block;
-  margin-bottom: 8px;
+  position: relative;
+  margin-bottom: 25px;
 }
 
 input, select, textarea {
   width: 100%;
-  max-width: 700px;
-  padding: 12px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: 2px solid #424141;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-textarea {
-  resize: vertical;
-  height: 150px;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #f0f0f0;
-  outline: none;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  font-size: 16px;
-  color: #fff;
-  display: block;
-  margin-bottom: 8px;
-}
-
-input, select, textarea {
-  width: 100%;
-  max-width: 700px;
-  padding: 12px;
+  padding: 14px 12px 14px 12px;
+  margin-left: -10px;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: 2px solid #424141;
   border-radius: 15px;
-  box-sizing: border-box;
+  font-family: Impact, serif;
+  font-size: 1em;
+  transition: all 0.3s ease;
 }
 
 textarea {
   resize: vertical;
   height: 250px;
+  margin-left: -10px;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label,
+select:focus + label,
+select:not([value=""]) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.85em;
+  color: #ffffff;
+  padding: 0 5px;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #f0f0f0;
+  border-color: #00aaff;
   outline: none;
+  box-shadow: 0 0 5px #00aaff;
+}
+
+select option[disabled] {
+  color: #888;
 }
 
 button {
   width: 80%;
-  padding: 10px;
-  margin-left: 40px;
+  padding: 12px;
+  margin-left: 10%;
   background: #0074D9;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
-  font-family: "Impact", serif;
+  font-family: Impact, serif;
   font-size: 1em;
 }
 
 button:hover {
   background: #005fa3;
+}
+
+#form-success {
+  text-align: center;
+  font-weight: bold;
+  color: #00ff99;
+  margin-top: 10px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 2px solid #424141;
+  border-radius: 15px;
+  font-family: Impact, serif;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+select option {
+  padding: 8px;
+}
+
+select::-webkit-scrollbar {
+  width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+select::-webkit-scrollbar-thumb {
+  background: #0074D9;
+  border-radius: 10px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+  background: #005fa3;
+}
+
+select {
+  scrollbar-width: thin;
+  scrollbar-color: #0074D9 rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+  button {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

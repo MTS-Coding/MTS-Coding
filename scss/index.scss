@@ -28,3 +28,19 @@ body {
     font-size: 1.1em;
     color: #ffffff;
 }
+
+.video-container {
+    text-align: center;
+}
+
+video {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
