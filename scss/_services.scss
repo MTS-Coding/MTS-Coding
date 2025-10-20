@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    background-size: cover;
+    color: #fff;
+}
+
+.main-container-services {
+    width: 81%;
+    max-width: auto;
+    margin: 40px auto;
+    padding: 30px;
+    background: none;
+    border-radius: 150px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.content h1 {
+    color: #00aaff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.services-table {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        width: auto;
+        max-width: auto;
+        }
+    .services-table th,
+    .services-table td {
+        border: 1px solid #857f7f;
+        border-radius: 10px;
+        padding: 10px 15px;
+        text-align: center;
+        margin-bottom: 30px
+        }
+    .services-table th {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #f0f0f0;
+        font-weight: bold;
+        border: 1px solid #4b4848;
+        }
+    .services-table td:first-child {
+        font-weight: bold;
+        }
+    .services-table td {
+        background-color: rgba(54, 52, 52, 0.6);
+        &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+        }
+
+.services-list {
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: justify;
+    font-family: $font2;
+    li {
+        list-style-type: square;
+    };
+}
