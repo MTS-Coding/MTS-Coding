@@ -35,13 +35,58 @@
     <main class="main-container-services">
 
         <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <div class="carousel-item">Básico</div>
-                <div class="carousel-item">Intermedio</div>
-                <div class="carousel-item">Avanzado</div>
-                <div class="carousel-item">Prémium</div>
+        <div class="carousel" id="carousel">
+            
+            <!-- Card 1 -->
+            <div class="carousel-item">
+                <div class="overlay">
+                    <h3>Básico</h3>
+                    <p>Sitios web que se adaptan perfectamente a cualquier dispositivo, garantizando una experiencia fluida para todos los usuarios.</p>
+                    <button>Contacto</button>
+                </div>
+                <div class="extra-info">
+                    <p>Placeholder</p>
+                </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="carousel-item">
+                <div class="overlay">
+                    <h3>Intermedio</h3>
+                    <p>Estructura y contenido optimizados para que tu web destaque en buscadores y llegue a tu audiencia objetivo.</p>
+                    <button>Contacto</button>
+                </div>
+                <div class="extra-info">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="carousel-item">
+                <div class="overlay">
+                    <h3>Avanzado</h3>
+                    <p>Interfaces interactivas y modernas usando las últimas tecnologías como HTML5, CSS3 y JavaScript.</p>
+                    <button>Contacto</button>
+                </div>
+                <div class="extra-info">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="carousel-item">
+                <div class="overlay">
+                    <h3>Prémium</h3>
+                    <p>Sistemas robustos y confiables, con bases de datos eficientes y APIs seguras que soportan cualquier escala.</p>
+                    <button>Contacto</button>
+                </div>
+                <div class="extra-info">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+
         </div>
+    </div>
 
         <!-- <section class="content">
             <h1>Paquetes de Servicios</h1>
@@ -127,5 +172,14 @@
         </footer>
     </div>
     <script src="../script.js"></script>
+    <script>
+        const carouselItems = document.querySelectorAll('.carousel-item');
+
+        carouselItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html>
