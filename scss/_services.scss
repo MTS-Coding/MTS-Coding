@@ -1,20 +1,31 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
     background: #000000;
-    background-size: cover;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #fff;
 }
 
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 .main-container-services {
-    width: 81%;
-    max-width: auto;
-    margin: 40px auto;
-    padding: 30px;
-    background: none;
-    border-radius: 150px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
+    width: 2000px;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 .content h1 {
@@ -28,6 +39,8 @@ body {
     font-size: 1.1em;
     color: #ffffff;
 }
+
+// Services Table //
 
 .services-table {
         font-size: 1.2em;
@@ -68,4 +81,70 @@ body {
     li {
         list-style-type: square;
     };
+}
+
+// H1 regular //
+
+.services-h1 {
+    text-align: center;
+    font-family: $font2;
+    font-size: 3.5em;
+    text-shadow: 
+        0 0 30px #00f0ff, 
+        0 0 35px #00f0ff,
+        0 0 40px #00f0ff,
+}
+
+.services-h1:hover {
+    transition: transform 0.7s;
+    transform: scale(1.05);
+}
+
+/* -------------------- CAROUSEL -------------------- */
+.carousel-container {
+    perspective: 1200px;
+}
+
+.carousel {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* -------------------- CARDS -------------------- */
+.carousel-item {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    background: #111122;
+    border: 2px solid #00f0ff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+    backface-visibility: hidden;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover 3D + glow intenso */
+.carousel-item:hover {
+    transform: scale(1.1) translateZ(30px) rotateY(10deg);
+    box-shadow: 0 0 30px #00f0ff, 0 0 60px #00f0ff inset;
+}
+
+/* -------------------- POSICIÓN DE CARDS -------------------- */
+.carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(350px); }
+.carousel-item:nth-child(2) { transform: rotateY(90deg) translateZ(350px); }
+.carousel-item:nth-child(3) { transform: rotateY(180deg) translateZ(350px); }
+.carousel-item:nth-child(4) { transform: rotateY(270deg) translateZ(350px); }
+
+/* -------------------- TRANSICIÓN DRAG -------------------- */
+.carousel.dragging {
+    transition: none;
 }
