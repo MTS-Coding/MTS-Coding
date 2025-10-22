@@ -20,7 +20,6 @@ body {
     width: 1820px;
     height: 100vh;
     margin: 0 10px 0 20px;
-    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,6 +159,53 @@ body {
 .carousel-item:nth-child(2) { transform: rotateY(90deg) translateZ(300px); }
 .carousel-item:nth-child(3) { transform: rotateY(180deg) translateZ(300px); }
 .carousel-item:nth-child(4) { transform: rotateY(270deg) translateZ(300px); }
+
+/* Navigation Arrows */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-style: flat;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background: rgba(0, 240, 255, 0.08);
+    border: 2px solid rgba(0, 240, 255, 0.9);
+    color: #00f0ff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 50;
+    transition: transform 0.18s ease, background 0.18s ease;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Hover */
+.nav:hover {
+    transform: translateY(-50%) scale(1.12);
+    background: rgba(0, 240, 255, 0.18);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev { left: -15vw; }
+.next { right: -15vw; }
+
+@media (max-width: 480px) {
+    .prev { left: -48px; }
+    .next { right: -48px; }
+    .nav { width: 44px; height: 44px; font-size: 1.25rem; }
+}
+
+.nav:focus { outline: none; }
 
 /* Overlay */
 
