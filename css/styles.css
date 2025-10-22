@@ -386,6 +386,13 @@ h1 {
   transform: scale(1.05);
 }
 
+.body-form {
+  background-image: url(../img/background-code-black-2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -406,6 +413,8 @@ form {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   width: 400px;
   position: relative;
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 h2 {
@@ -432,6 +441,8 @@ input, select, textarea {
   font-family: Impact, serif;
   font-size: 1em;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00f0ff, 0 0 15px #00f0ff inset;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 textarea {
@@ -486,6 +497,8 @@ button {
   transition: 0.3s;
   font-family: Impact, serif;
   font-size: 1em;
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
