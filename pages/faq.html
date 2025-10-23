@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTS Coding: FAQ</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/mts-fav.png" type="image/png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mariana Álvarez Flores, Tomás de Azkue, Jorge Fracalossi Martínez">
+</head>
+<body>
+    <header class="navbar-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/mts-logo-header2.png" alt="Logo" />
+                <!-- <span>(MTS).Coding</span> -->
+            </div>
+
+            <ul class="nav-links">
+                <li class="li-1"><a href="../index.html">Inicio</a></li>
+                <li class="li-2"><a href="./pages/services.html">Servicios</a></li>
+                <li class="li-3"><a href="#">Nuestros Proyectos</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li class="li-4"><a href="./pages/about-us.html">About Us</a></li>
+                <li class="li-5"><a href="./pages/form.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const testimonios = document.querySelectorAll(".chat-testimonio");
+            testimonios.forEach(t => t.style.display = "none");
+            let i = 0;
+            function mostrarSiguiente() {
+                if (i < testimonios.length) {
+                    testimonios[i].style.display = "block";
+                    testimonios[i].style.opacity = 0;
+                    testimonios[i].style.animation = "aparecer 0.8s forwards";
+                    i++;
+                    setTimeout(mostrarSiguiente, 1500); // tiempo entre cada testimonio
+                }
+            }
+
+            mostrarSiguiente();
+        });
+    </script>
+
+    <main class="main-container-faq">
+        <section>
+            <h1 class="faq-h1">Preguntas que nos hacen con frecuencia</h1>
+            <p class="faq-p">
+                ¿Tenés dudas? ¿Hay algo que quieras saber, pero dudás en contactarte para consultar? Encontrá acá las preguntas más frecuentes y sus correspondientes respuestas, e informate aún más antes de comunicarte con nosotros.
+            </p>
+        </section>
+
+        <div class="container">
+            <section class="preguntas-chat">
+                    <h2>Preguntas y Respuestas</h2>
+                <div class="chat-testimonio izquierda" style="display: none;">
+                    <p><strong>Sofía:</strong> Adoptamos a Lolo hace un año y no podemos imaginar la vida sin él 💕</p>
+                </div>
+                <div class="chat-testimonio derecha" style="display: none;">
+                    <p><strong>Martín:</strong> La entrevista fue súper amena y el seguimiento nos hizo sentir acompañados.</p>
+                </div>
+                <div class="chat-testimonio izquierda" style="display: none;">
+                    <p><strong>Lucía:</strong> ¡Gracias por ayudarnos a encontrar a la compañera perfecta para nuestros hijos!</p>
+                </div>
+                <div class="chat-testimonio derecha" style="display: none;">
+                    <p><strong>Martín:</strong> La entrevista fue súper amena y el seguimiento nos hizo sentir acompañados.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <div>
+        <footer>
+            <p class="p2">¡Unite a nuestras redes sociales!</p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/mts.coding/profilecard/?igsh=MjJxNTRjdzZiZWty" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/ig-logo.png" alt="Instagram"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/x-logo.png" alt="X"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img class="footer-img" src="../img/fb-logo.png" alt="Facebook"></a>
+            </div>
+            <p class="p2">&copy; MTS Coding | Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
