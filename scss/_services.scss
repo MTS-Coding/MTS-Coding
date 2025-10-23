@@ -42,36 +42,50 @@ body {
 
 // Services Table //
 
-.services-table {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-        width: auto;
-        max-width: auto;
-        }
-    .services-table th,
-    .services-table td {
-        border: 1px solid #857f7f;
-        border-radius: 10px;
-        padding: 10px 15px;
-        text-align: center;
-        margin-bottom: 30px
-        }
-    .services-table th {
-        background-color: rgba(0, 0, 0, 0.1);
-        color: #f0f0f0;
-        font-weight: bold;
-        border: 1px solid #4b4848;
-        }
-    .services-table td:first-child {
-        font-weight: bold;
-        }
-    .services-table td {
-        background-color: rgba(54, 52, 52, 0.6);
-        &:hover {
-        transform: scale(1.01);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-        }
-        }
+// .services-table {
+//         font-size: 1.2em;
+//         margin-bottom: 30px;
+//         width: auto;
+//         max-width: auto;
+//         }
+//     .services-table th,
+//     .services-table td {
+//         border: 1px solid #857f7f;
+//         border-radius: 10px;
+//         padding: 10px 15px;
+//         text-align: center;
+//         margin-bottom: 30px
+//         }
+//     .services-table th {
+//         background-color: rgba(0, 0, 0, 0.1);
+//         color: #f0f0f0;
+//         font-weight: bold;
+//         border: 1px solid #4b4848;
+//         }
+//     .services-table td:first-child {
+//         font-weight: bold;
+//         }
+//     .services-table td {
+//         background-color: rgba(54, 52, 52, 0.6);
+//         &:hover {
+//         transform: scale(1.01);
+//         box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+//         }
+//         }
+
+.services-container {
+    width: 50%;
+    max-width: 900px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 25%;
+}
+
+.services-p {
+    font-size: 1.4em;
+    text-shadow: 0 0 20px #00f0ff,
+        0 0 25px #00f0ff;
+}
 
 .services-list {
     font-size: 1.2em;
@@ -80,6 +94,9 @@ body {
     font-family: $font2;
     li {
         list-style-type: square;
+        text-shadow:
+            0 0 10px #00f0ff,
+            0 0 15px #00f0ff;
     };
 }
 
@@ -99,6 +116,19 @@ body {
 .services-h1:hover {
     transition: transform 0.7s;
     transform: scale(1.05);
+}
+
+.services-h2 {
+    text-align: center;
+    font-family: $font2;
+    font-weight: 800;
+    border: none;
+    margin-bottom: 40px;
+    font-size: 3.5em;
+    text-shadow: 
+        0 0 30px #00f0ff, 
+        0 0 35px #00f0ff,
+        0 0 40px #00f0ff,
 }
 
 /* -------------------- CAROUSEL -------------------- */

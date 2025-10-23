@@ -58,7 +58,7 @@ footer .footer-img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   padding: 10px 0;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6.75px);
 }
 
 .navbar {
@@ -195,11 +195,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.body-about-us {
-  background-image: url(../img/background-code.png);
-  background-size: cover;
-}
-
 .navbar-container-us {
   width: 100%;
   max-width: 80%;
@@ -219,7 +214,7 @@ h1 {
   margin: 40px auto;
   padding: 30px;
   border-radius: 150px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #00f0ff, 0 0 15px #ffffff, 0 0 20px #00f0ff, 0 0 25px #ffffff, 0 0 30px #00f0ff;
   backdrop-filter: blur(5px);
 }
 
@@ -267,9 +262,9 @@ h1 {
   height: 100%;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 5px solid #ffffff;
+  border: 5px outset rgba(0, 0, 0, 0.6);
   border-radius: 100px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px #00f0ff, 0 0 15px #ffffff, 0 0 20px #00f0ff, 0 0 25px #ffffff, 0 0 30px #00f0ff;
   overflow: hidden;
   transform: translateZ(0);
 }
@@ -328,7 +323,7 @@ h1 {
   font-family: "matchavibes", serif;
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #ffffff, 0 0 15px #00f0ff, 0 0 20px #ffffff, 0 0 25px #00f0ff;
   background: none;
   padding: 10px;
   border-radius: 10px;
@@ -356,11 +351,11 @@ h1 {
   margin-bottom: 20px;
   font-size: 1.8em;
   font-family: "vanillapancake", serif;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: none;
   padding-bottom: 10px;
   text-align: center;
   transform: translateZ(40px);
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
   transition: transform 0.5s ease, text-shadow 0.5s ease;
 }
 .card-back .card-back h2 .presentation-card-inner:hover .card-back h2 {
@@ -396,7 +391,7 @@ h1 {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   font-family: Impact, serif;
   padding: 30px;
   border-radius: 15px;
@@ -414,14 +409,6 @@ form {
   position: relative;
   box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 2.2em;
-  -webkit-text-stroke: 0.2px black;
-  color: #fff;
 }
 
 .form-group {
@@ -488,7 +475,7 @@ button {
   width: 80%;
   padding: 12px;
   margin-left: 10%;
-  background: #0074D9;
+  background: none;
   color: white;
   border: none;
   border-radius: 20px;
@@ -496,8 +483,9 @@ button {
   transition: 0.3s;
   font-family: Impact, serif;
   font-size: 1em;
-  box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
+  box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff inset;
   transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(6.75px);
 }
 
 button:hover {
@@ -637,39 +625,17 @@ body {
   color: #ffffff;
 }
 
-.services-table {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  width: auto;
-  max-width: auto;
-}
-
-.services-table th,
-.services-table td {
-  border: 1px solid #857f7f;
-  border-radius: 10px;
-  padding: 10px 15px;
+.services-container {
+  width: 50%;
+  max-width: 900px;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 10px;
+  margin-left: 25%;
 }
 
-.services-table th {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #f0f0f0;
-  font-weight: bold;
-  border: 1px solid #4b4848;
-}
-
-.services-table td:first-child {
-  font-weight: bold;
-}
-
-.services-table td {
-  background-color: rgba(54, 52, 52, 0.6);
-}
-.services-table td:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+.services-p {
+  font-size: 1.4em;
+  text-shadow: 0 0 20px #00f0ff, 0 0 25px #00f0ff;
 }
 
 .services-list {
@@ -680,6 +646,7 @@ body {
 }
 .services-list li {
   list-style-type: square;
+  text-shadow: 0 0 10px #00f0ff, 0 0 15px #00f0ff;
 }
 
 .services-h1 {
@@ -693,6 +660,16 @@ body {
 .services-h1:hover {
   transition: transform 0.7s;
   transform: scale(1.05);
+}
+
+.services-h2 {
+  text-align: center;
+  font-family: "creatodisplay", serif;
+  font-weight: 800;
+  border: none;
+  margin-bottom: 40px;
+  font-size: 3.5em;
+  text-shadow: 0 0 30px #00f0ff, 0 0 35px #00f0ff, 0 0 40px #00f0ff;
 }
 
 /* -------------------- CAROUSEL -------------------- */
