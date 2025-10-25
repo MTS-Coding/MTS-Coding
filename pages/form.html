@@ -26,7 +26,7 @@
             <ul class="nav-links">
                 <li class="li-1"><a href="../index.html">Inicio</a></li>
                 <li class="li-2"><a href="./services.html">Servicios</a></li>
-                <li class="li-3"><a href="#">Nuestros Proyectos</a></li>
+                <li class="li-3"><a href="./our-projects.html">Nuestros Proyectos</a></li>
                 <li class="li-4"><a href="./faq.html">FAQ</a></li>
                 <li class="li-5"><a href="./about-us.html">About Us</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -35,7 +35,7 @@
     </header>
 
     <main class="form-container">
-        <!-- ❗ Formulario corregido: sin duplicación de <form> -->
+        
         <form action="https://formsubmit.co/codigo.mts@gmail.com" method="POST" id="contact-form" target="_blank">
             <h2>Envianos un mensaje</h2>
 
@@ -82,29 +82,29 @@
 
     <!-- ✅ Script dinámico para cargar países -->
     <script>
-    document.addEventListener("DOMContentLoaded", async () => {
-        const selectPais = document.getElementById("pais");
+        document.addEventListener("DOMContentLoaded", async () => {
+            const selectPais = document.getElementById("pais");
 
-        try {
-            const response = await fetch("../data/countries.json");
-            const countries = await response.json();
+            try {
+                const response = await fetch("../data/countries.json");
+                const countries = await response.json();
 
-            // Limpiamos el select y agregamos el placeholder
-            selectPais.innerHTML = '<option value="">Seleccioná tu país</option>';
+                // Limpiamos el select y agregamos el placeholder
+                selectPais.innerHTML = '<option value="">Seleccioná tu país</option>';
 
-            // Agregamos cada país como <option>
-            countries.forEach(pais => {
-                const option = document.createElement("option");
-                option.value = pais;
-                option.textContent = pais;
-                selectPais.appendChild(option);
-            });
+                // Agregamos cada país como <option>
+                countries.forEach(pais => {
+                    const option = document.createElement("option");
+                    option.value = pais;
+                    option.textContent = pais;
+                    selectPais.appendChild(option);
+                });
 
-        } catch (error) {
-            console.error("Error al cargar la lista de países:", error);
-            selectPais.innerHTML = '<option value="">Error al cargar países</option>';
-        }
-    });
-</script>
+            } catch (error) {
+                console.error("Error al cargar la lista de países:", error);
+                selectPais.innerHTML = '<option value="">Error al cargar países</option>';
+            }
+        });
+    </script>
 </body>
 </html>
