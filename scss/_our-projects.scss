@@ -63,7 +63,24 @@ figure {
     border-right: 3px solid #00f7ff;
     padding-right: 5px;
 
-    animation: blink 0.7s infinite, glowPulse 1.5s ease-in-out infinite alternate, glitchPulse 2s infinite;
+    opacity: 0;
+    animation:
+        fadeIn 1.2s ease forwards 0.3s,
+        blink 0.7s infinite,
+        glowPulse 1.5s ease-in-out infinite alternate,
+        glitchPulse 2s infinite;
+}
+
+/* -------------------- ANIMATIONS -------------------- */
+
+@keyframes fadeIn {
+    0%   { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 100%; }
 }
 
 @keyframes blink {
@@ -77,10 +94,10 @@ figure {
 }
 
 @keyframes glitchPulse {
-    0% { text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff40, 0 0 45px #00f7ff20; }
-    20% { text-shadow: 1px 0 18px #00f7ff, -1px 0 22px #00f7ff50, 0 0 45px #00f7ff30; }
-    40% { text-shadow: -1px 0 15px #00f7ff, 1px 0 30px #00f7ff40, 0 0 45px #00f7ff30; }
-    60% { text-shadow: 1px 1px 15px #00f7ff, -1px -1px 30px #00f7ff50, 0 0 45px #00f7ff30; }
-    80% { text-shadow: -1px 1px 15px #00f7ff, 1px -1px 30px #00f7ff40, 0 0 45px #00f7ff30; }
+    0%   { text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff40, 0 0 45px #00f7ff20; }
+    20%  { text-shadow: 1px 0 18px #00f7ff, -1px 0 22px #00f7ff50, 0 0 45px #00f7ff30; }
+    40%  { text-shadow: -1px 0 15px #00f7ff, 1px 0 30px #00f7ff40, 0 0 45px #00f7ff30; }
+    60%  { text-shadow: 1px 1px 15px #00f7ff, -1px -1px 30px #00f7ff50, 0 0 45px #00f7ff30; }
+    80%  { text-shadow: -1px 1px 15px #00f7ff, 1px -1px 30px #00f7ff40, 0 0 45px #00f7ff30; }
     100% { text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff40, 0 0 45px #00f7ff20; }
 }

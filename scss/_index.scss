@@ -17,25 +17,26 @@ body {
     backdrop-filter: blur(15px);
 }
 
-.content h1 {
-    color: #00aaff;
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.content p {
-    line-height: 1.6;
-    font-size: 1.1em;
+.h1-main {
+    margin-bottom: 20px;
+    font-family: $font2;
+    font-size: 3em;
     color: #ffffff;
+    text-align: center;
+    font-weight: 1000;
+    text-shadow:
+        0 0 20px #00f0ff,
+        0 0 30px #00f0ff,
+        0 0 40px #00f0ff,
+        0 0 50px #00f0ff;
 }
-
 .video-container {
     text-align: center;
 }
 
 video {
     border: 2px solid #00f0ff;
-    border-radius: 8px;
+    border-radius: 50px;
     max-width: 100%;
     height: auto;
     box-shadow:
@@ -45,6 +46,4 @@ video {
         0 0 40px #00f0ff;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
+

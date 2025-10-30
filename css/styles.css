@@ -167,16 +167,14 @@ body {
   backdrop-filter: blur(15px);
 }
 
-.content h1 {
-  color: #00aaff;
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.content p {
-  line-height: 1.6;
-  font-size: 1.1em;
+.h1-main {
+  margin-bottom: 20px;
+  font-family: "creatodisplay", serif;
+  font-size: 3em;
   color: #ffffff;
+  text-align: center;
+  font-weight: 1000;
+  text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff, 0 0 40px #00f0ff, 0 0 50px #00f0ff;
 }
 
 .video-container {
@@ -185,14 +183,10 @@ body {
 
 video {
   border: 2px solid #00f0ff;
-  border-radius: 8px;
+  border-radius: 50px;
   max-width: 100%;
   height: auto;
   box-shadow: 0 0 10px #ffffff, 0 0 20px #00f0ff, 0 0 30px #ffffff, 0 0 40px #00f0ff;
-}
-
-h1 {
-  margin-bottom: 20px;
 }
 
 .navbar-container-us {
@@ -391,11 +385,11 @@ h1 {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   font-family: Impact, serif;
   padding: 30px;
   border-radius: 15px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   margin: 50px auto;
 }
 
@@ -1009,9 +1003,29 @@ figure {
   overflow: hidden;
   border-right: 3px solid #00f7ff;
   padding-right: 5px;
-  animation: blink 0.7s infinite, glowPulse 1.5s ease-in-out infinite alternate, glitchPulse 2s infinite;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards 0.3s, blink 0.7s infinite, glowPulse 1.5s ease-in-out infinite alternate, glitchPulse 2s infinite;
 }
 
+/* -------------------- ANIMATIONS -------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes blink {
   50% {
     border-color: transparent;
